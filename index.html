@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OT — Personal Bio</title>
+  <meta name="description" content="Personal site of OT: projects, research, and ways to connect." />
+  <link rel="icon" href="data:," />
+  <!-- Minimal, classy defaults -->
+  <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+  <style>
+    :root { --width-content: 860px; }
+    header .tag { font-size: .95rem; opacity:.85 }
+    .grid { display:grid; gap:1rem }
+    @media (min-width: 720px){ .grid-2 { grid-template-columns: 1fr 1fr } }
+    .card { border: 1px solid rgba(0,0,0,.08); border-radius: 14px; padding: 1rem }
+    .muted { opacity:.8 }
+    nav a { text-decoration:none }
+    footer small { opacity:.75 }
+    .pill { font-size:.8rem; padding:.25rem .6rem; border:1px solid rgba(0,0,0,.15); border-radius:999px; margin-right:.35rem }
+    .icons a { display:inline-flex; align-items:center; gap:.4rem; margin-right:.6rem }
+    .icons svg { width:18px; height:18px; vertical-align:middle }
+    /* Optional: limit content width a bit more on very wide screens */
+    main, header, footer { max-width: 860px; margin: auto; padding: 0 1rem; }
+  </style>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="OT — Personal Bio">
+  <meta property="og:description" content="Projects, research, and ways to connect.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ot.github.io/">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"OT",
+    "url":"https://ot.github.io/",
+    "email":"MAILTO:YOU@EXAMPLE.COM",
+    "sameAs":[
+      "https://github.com/ot",
+      "https://www.linkedin.com/in/YOUR-LINKEDIN/"
+    ],
+    "jobTitle":"YOUR ROLE / TITLE",
+    "description":"Short professional tagline."
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <h1>OT</h1>
+    <p class="tag">YOUR ROLE • CITY/STATE • <a href="mailto:YOU@EXAMPLE.COM">YOU@EXAMPLE.COM</a></p>
+    <div class="icons">
+      <a href="https://github.com/ot" target="_blank" rel="noopener" aria-label="GitHub">
+        <!-- GitHub icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.57v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.48-1.34-5.48-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.76.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.65-5.49 5.95.43.37.81 1.09.81 2.2v3.26c0 .31.21.68.82.57A12 12 0 0 0 12 .5z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <!-- LinkedIn icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3A2.94 2.94 0 0 1 22 6v12a2.94 2.94 0 0 1-3 3H5a2.94 2.94 0 0 1-3-3V6a2.94 2.94 0 0 1 3-3h14m-.5 16.5v-5.4c0-2.88-1.53-4.22-3.57-4.22a3.09 3.09 0 0 0-2.78 1.53h-.05V10H9v9.5h3.21v-5.29c0-1.4.26-2.76 2-2.76s2 1.53 2 2.67v5.38zM6.5 8.5A1.75 1.75 0 1 0 4.75 6.75 1.75 1.75 0 0 0 6.5 8.5zM8.11 19.5H4.89V10h3.22z"/></svg>
+        LinkedIn
+      </a>
+      <a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Brief intro (2–4 sentences): who you are, what you work on, and what you’re looking for.
+        Keep it crisp and oriented to the reader (how you can help, what you build, what you study).
+      </p>
+      <p class="muted">Tip: replace this with a short narrative + 3 keywords in pills:</p>
+      <p>
+        <span class="pill">Data</span>
+        <span class="pill">Engineering</span>
+        <span class="pill">Climate</span>
+      </p>
+    </section>
+
+    <section id="highlights">
+      <h2>Highlights</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Now</h3>
+          <ul>
+            <li>Role @ Organization — one-line impact.</li>
+            <li>Area of focus — tools/stack.</li>
+            <li>Open to — collaborations / speaking / roles.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Previously</h3>
+          <ul>
+            <li>Achievement A — metric or outcome.</li>
+            <li>Project B — what it did in plain language.</li>
+            <li>Teaching/Service — brief note.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3><a href="https://github.com/ot/REPO-1">Project One</a></h3>
+          <p class="muted">What problem it solves; key methods/tech; result in one sentence.</p>
+          <p><strong>Stack:</strong> Python, SQL, Docker</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/ot/REPO-2">Project Two</a></h3>
+          <p class="muted">Short description. Link to paper/demo if relevant.</p>
+          <p><strong>Stack:</strong> MATLAB, NumPy</p>
+        </article>
+      </div>
+      <p class="muted">Tip: Add more cards or link to a dedicated /projects page later.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Best way to reach me: <a href="mailto:YOU@EXAMPLE.COM">YOU@EXAMPLE.COM</a> •
+        <a href="https://github.com/ot">GitHub</a> •
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <p><small>© <span id="year"></span> OT · Built with GitHub Pages</small></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
