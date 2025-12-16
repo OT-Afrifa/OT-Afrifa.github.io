@@ -4,11 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Research interests — Francis Osei Tutu Afrifa</title>
-  <meta name="description" content="Research interests and themes." />
+  <meta name="description" content="Research interests, themed summaries, and visual highlights." />
   <link rel="icon" href="data:," />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header (same look across pages) -->
   <header class="topbar">
     <div class="nav">
       <div class="brand">Francis Osei Tutu Afrifa</div>
@@ -23,24 +24,113 @@
   </header>
 
   <main>
-    <div class="breadcrumb"><a href="index.html">Home</a> › Research interests</div>
+    <!-- Hero strip (S1 style) -->
     <h1>Research interests</h1>
+    <div class="hero">
+      <img src="img/hero_satellite.jpg" alt="Satellite mosaic of convective cloud fields" />
+    </div>
 
-    <h2>Themes</h2>
-    <ul>
-      <li>Orographic precipitation and wintertime convection in complex terrain</li>
-      <li>Convection-permitting modeling (WRF/MPAS) and storm organization</li>
-      <li>Precipitation efficiency, heavy precipitation, and flood risk</li>
-      <li>Satellite-informed, process-oriented model evaluation (GPM, CloudSat)</li>
-      <li>Weather–energy interface and environmental applications</li>
-    </ul>
+    <p class="lead">
+      I study how precipitation systems form, evolve, and impact people—spanning
+      <strong>cold-season orographic convection</strong> in complex terrain and
+      <strong>West African rainfall regimes</strong> linked to flood risk. I blend observations,
+      convection-permitting and LES modeling (WRF/MPAS), and climate-model ensembles to connect
+      process-level dynamics with practical forecasting and adaptation.
+    </p>
 
-    <h2>Methods & tools</h2>
-    <ul>
-      <li>High-performance computing on NCAR/CISL systems</li>
-      <li>Python/xarray/wrf-python; objective feature detection</li>
-      <li>Reanalysis (ERA5), radar/satellite fusion, and verification metrics</li>
-    </ul>
+    <!-- THEME 1 -->
+    <section>
+      <h2>Precipitation processes: from microscale to large-scale</h2>
+      <p>
+        A core theme is disentangling how stability, gravity waves, terrain-forced lifting, and
+        microphysics organize convection and control precipitation efficiency across scales.
+        I use nested WRF (2.7 km → 900 m → 100 m) and targeted observations to follow the
+        lifecycle of convective cells embedded in stratiform clouds.
+      </p>
+
+      <div class="figure">
+        <img src="img/fig_cesc_cells.jpg" alt="Object-identified convective cells in orographic snowfall" />
+        <div class="caption">
+          Object-based identification of elevated convection (CESC) within stratiform precipitation,
+          tracking cell growth/decay, cloud-top heights, and rain/snow rates over complex terrain.
+        </div>
+      </div>
+
+      <ul>
+        <li><strong>CESC case analysis (SNOWIE IOP12):</strong> Mesoscale setup and vertical structure of emergent orographic convection; how PI release and terrain interactions focus snowfall.</li>
+        <li><strong>Precipitation efficiency:</strong> Relating cell intensity, organization, and microphysical pathways to distribution of snowfall/downwind spillover.</li>
+        <li><strong>Resolution matters:</strong> Downscaling to 100 m LES to capture BL turbulence, waves, and hydrometeor growth not resolved at km-scale.</li>
+      </ul>
+    </section>
+
+    <!-- THEME 2 -->
+    <section>
+      <h2>Convective storms in km-scale climate model simulations</h2>
+      <p>
+        I evaluate how well km-scale models represent convective organization and storm dynamics,
+        using process-oriented diagnostics and satellite/radar constraints. This includes a
+        detection algorithm for CESC and sensitivity-aware metrics that scale to seasonal
+        climatologies and forecast post-processing.
+      </p>
+
+      <div class="grid-figs cols-2 figure">
+        <img src="img/fig_methods_tracking.jpg" alt="Diagram of object tracking workflow for convective features" />
+        <img src="img/fig_methods_verif.jpg" alt="Process-oriented verification schematic for convective diagnostics" />
+      </div>
+      <div class="caption">
+        Left: region-growing/labeling pipeline with stability and CTH filters for elevated convection.
+        Right: process-oriented verification linking modeled cells to observed features (GPM/CloudSat/radar).
+      </div>
+
+      <ul>
+        <li><strong>CESC detector:</strong> Separate elevated vs. surface-based convection; quantify area, rates, and contributions to total precip.</li>
+        <li><strong>Process-based verification:</strong> Connect modeled cell statistics with observed vertical structure and precipitation signatures.</li>
+        <li><strong>Operations pathway:</strong> Post-process HRRR/WRF to flag CESC-enhanced snowfall zones for forecasters and seeding programs.</li>
+      </ul>
+    </section>
+
+    <!-- THEME 3 -->
+    <section>
+      <h2>West African rainfall regimes, extremes, and flood potential</h2>
+      <p>
+        I analyze seasonal features like the Little Dry Season (LDS) and quantify heavy-precipitation-induced
+        flood (CHP) potential using multi-index diagnostics with CMIP6 ensembles and CHIRPS validation.
+        Results inform adaptation for urban flooding and water management.
+      </p>
+
+      <div class="figure">
+        <img src="img/fig_lds_pattern.jpg" alt="Guinea Coast map and LDS rainfall pattern" />
+        <div class="caption">
+          Little Dry Season characteristics over the Guinea Coast: spatial variability in rainfall reduction and its
+          relationship with SST and OLR fields; benchmarking model skill against CHIRPS before projections.
+        </div>
+      </div>
+
+      <div class="figure">
+        <img src="img/fig_flood_indices.jpg" alt="Multi-index flood potential metrics across West Africa" />
+        <div class="caption">
+          Multi-index flood diagnostics (e.g., SAI, RAI, SPI) for Guinea Coast, Savanna, and Sahel reveal
+          rising extremes under higher-emission scenarios, with strong regional contrasts.
+        </div>
+      </div>
+
+      <ul>
+        <li><strong>LDS dynamics:</strong> Historical patterns and drivers; scenario-dependent shifts with spatial heterogeneity.</li>
+        <li><strong>CHP floods:</strong> Counts and maxima of meteorological flood potential intensify in Savanna/Sahel; implications for early warning.</li>
+        <li><strong>Next steps:</strong> Urbanization–compound risk linkages; CORDEX vs. CMIP6 comparison; refined bias-correction for impacts workflows.</li>
+      </ul>
+    </section>
+
+    <!-- WORKS IN PROGRESS -->
+    <section>
+      <h2>Works in progress</h2>
+      <ul>
+        <li><strong>CESC Part I (published/accepted):</strong> Mesoscale analysis and impacts on precipitation (SNOWIE IOP12).</li>
+        <li><strong>CESC algorithm & climatology (Parts II–III):</strong> Finalizing detector paper; seasonal climatology over the interior NW U.S.</li>
+        <li><strong>LES microphysics pathway study:</strong> 100 m simulations to quantify BL–microphysics controls on snowfall efficiency.</li>
+        <li><strong>West Africa extensions:</strong> LDS extremes and compound flood risk; CMIP6 vs. CORDEX skill and projections.</li>
+      </ul>
+    </section>
   </main>
 
   <footer class="footer">
