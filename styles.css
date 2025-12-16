@@ -29,3 +29,38 @@ ul.links li{margin:6px 0}
 .icons svg{width:18px;height:18px;fill:currentColor}
 .breadcrumb{font-size:.95rem;margin:6px 0 20px}
 .breadcrumb a{color:var(--muted)}
+
+/* --- Research page visuals --- */
+.hero {
+  max-width: var(--max);
+  margin: 10px auto 28px;
+  padding: 0 18px;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  filter: grayscale(100%);
+}
+.figure {
+  margin: 16px 0 26px;
+}
+.figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  display: block;
+}
+.caption {
+  font-size: .95rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.grid-figs {
+  display: grid;
+  gap: 14px;
+}
+@media (min-width: 760px){
+  .grid-figs.cols-2 { grid-template-columns: 1fr 1fr; }
+}
