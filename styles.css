@@ -37,7 +37,7 @@ ul.links li{margin:6px 0}
   padding: 0 18px;
 }
 .hero img {
-  width: 70%;
+  width: 100%;
   height: auto;
   display: block;
   border-radius: 2px;
@@ -47,7 +47,7 @@ ul.links li{margin:6px 0}
   margin: 16px 0 26px;
 }
 .figure img {
-  width: 70%;
+  width: 100%;
   height: auto;
   border-radius: 2px;
   display: block;
